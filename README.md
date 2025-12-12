@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gaspard Hassenforder - Digital Portfolio
 
-## Getting Started
+A modern, interactive digital CV/portfolio built with Next.js 16, featuring an AI-powered chatbot assistant that answers questions about professional experience, skills, and projects.
 
-First, run the development server:
+## 🚀 Features
 
+- **Interactive AI Assistant**: Chat with "Buddy", an OpenAI-powered assistant that can answer questions about professional background
+- **Responsive Design**: Fully responsive layout optimized for all devices
+- **Dark Mode Support**: Automatic dark/light mode based on system preferences
+- **Modern UI**: Built with Tailwind CSS and Framer Motion animations
+- **Type-Safe**: Full TypeScript implementation
+- **Performance Optimized**: Static generation where possible for fast loading times
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **AI Integration**: OpenAI GPT-4o-mini via Vercel AI SDK
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+
+## 📋 Prerequisites
+
+- Node.js 20+ 
+- npm or yarn
+- OpenAI API key ([Get one here](https://platform.openai.com/api-keys))
+
+## 🔧 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd CV_project_ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create environment file:
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Add your OpenAI API key to `.env.local`:
+```
+OPENAI_API_KEY=your_actual_api_key_here
+```
 
-## Learn More
+## 🏃 Running Locally
 
-To learn more about Next.js, take a look at the following resources:
+Start the development server:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Building for Production
 
-## Deploy on Vercel
+```bash
+npm run build
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deploying to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Option 1: Deploy via Vercel CLI
+
+1. Install Vercel CLI:
+```bash
+npm i -g vercel
+```
+
+2. Deploy:
+```bash
+vercel
+```
+
+3. Add your environment variable:
+```bash
+vercel env add OPENAI_API_KEY
+```
+
+### Option 2: Deploy via Vercel Dashboard
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com/new)
+3. Add `OPENAI_API_KEY` to Environment Variables in project settings
+4. Deploy!
+
+## 📝 Customization
+
+To customize this portfolio for your own use:
+
+1. **Update Personal Information**: Edit `src/lib/data.ts` with your own details
+2. **Replace Images**: Add your profile picture and CV to `/public` folder
+3. **Modify Sections**: Edit components in `src/components/` to add/remove sections
+4. **Styling**: Adjust colors and styling in `src/app/globals.css` and Tailwind config
+
+## 📁 Project Structure
+
+```
+CV_project_ts/
+├── public/              # Static assets (images, PDFs)
+├── src/
+│   ├── app/            # Next.js app router
+│   │   ├── api/chat/   # AI chatbot API endpoint
+│   │   ├── layout.tsx  # Root layout
+│   │   └── page.tsx    # Home page
+│   ├── components/     # React components
+│   │   ├── ui/         # Reusable UI components
+│   │   ├── Chatbot.tsx
+│   │   ├── Education.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Papers.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Skills.tsx
+│   │   └── WorkHistory.tsx
+│   └── lib/
+│       ├── data.ts     # Personal data and content
+│       └── utils.ts    # Utility functions
+├── .env.example        # Example environment variables
+├── package.json
+└── tsconfig.json
+```
+
+## 🧪 Code Quality
+
+```bash
+# Run linting
+npm run lint
+
+# Run type checking
+npm run build
+```
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 👤 Contact
+
+**Gaspard Hassenforder**
+- Email: hassenforder.gaspard@gmail.com
+- LinkedIn: [gaspard-hassenforder](https://www.linkedin.com/in/gaspard-hassenforder-554431225/)
+- GitHub: [Gaspard0302](https://github.com/Gaspard0302)
+
+---
+
+Built with ❤️ using Next.js and Vercel AI SDK
