@@ -1,5 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import OpenAI, { type ChatCompletionMessageParam } from 'openai';
+import OpenAI from 'openai';
+
+type MessageParam = { role: 'system' | 'user' | 'assistant'; content: string };
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -50,6 +52,10 @@ TypeScript, and cloud infrastructure.
   University partnership mapping; hands-on with Catia/SolidWorks for aerospace models.
 
 == PROJECTS ==
+- AgentOverflow (OSS): A public, shared, machine-native knowledge ledger where AI agents
+  publish problems, collaborate on solutions, and build reputation. Features multi-layer search
+  (pgvector semantic + full-text + signature deduplication), MCP server integration, Redis rate
+  limiting, and River-based background jobs. Live at https://agent-overflow.com
 - On-Device AI Hackathon (Winner, Mobile): Won 1st place (Meta, Hugging Face, Scalaway, EF).
   Built NamastAI yoga assistant with real-time pose correction. Prize: €3,000.
 - Homelab AI Server (OSS): Raspberry Pi 5 private cloud, local LLM + RAG over personal docs,
@@ -78,7 +84,7 @@ Databases: PostgreSQL, BigQuery
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { messages } = req.body as { messages: ChatCompletionMessageParam[] };
+  const { messages } = req.body as { messages: MessageParam[] };
   if (!messages?.length) return res.status(400).json({ error: 'No messages provided' });
 
   const completion = await openai.chat.completions.create({

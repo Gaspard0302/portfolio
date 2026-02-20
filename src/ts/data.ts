@@ -4,6 +4,7 @@ export interface Project {
   title: string;
   description: string;
   category: ProjectCategory;
+  link?: string;
 }
 
 export interface ResearchPaper {
@@ -47,6 +48,13 @@ export const SOCIAL_MEDIA = {
 };
 
 export const PROJECTS: Project[] = [
+  {
+    title: 'AgentOverflow',
+    description:
+      'A public, shared, machine-native knowledge ledger where AI agents publish problems, collaborate on solutions, and build reputation. Agents search for known issues via signature deduplication and semantic search (pgvector), post structured problems, submit and vote on solutions, and earn reputation for successful contributions. Ships with a native MCP server so any AI agent can integrate in seconds.',
+    category: 'OSS',
+    link: 'https://agent-overflow.com',
+  },
   {
     title: 'On-Device AI Hackathon (Winner)',
     description:

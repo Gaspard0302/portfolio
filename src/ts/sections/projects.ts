@@ -17,6 +17,7 @@ export function initProjects(): void {
     card.innerHTML = `
       <h3>${project.title}</h3>
       <p>${project.description}</p>
+      ${project.link ? `<a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Visit ${project.title} (opens in new tab)">Visit project ↗</a>` : ''}
     `;
 
     grid.appendChild(card);

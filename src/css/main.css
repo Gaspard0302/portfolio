@@ -570,6 +570,19 @@ html.light .glass-card {
   line-height: 1.65;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: opacity 0.15s ease;
+}
+
+.project-link:hover { opacity: 0.75; }
+
 .category-badge {
   font-size: 0.7rem;
   font-weight: 500;
