@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital CV / Gaspard Hassenforder</title>
+  <meta name="description" content="AI Engineer &amp; Data Scientist specializing in autonomous multi-agent systems, RAG architectures, and scalable AI solutions. Passionate about bridging the gap between research and production to drive business value." />
+
+  <!-- FOUC prevention: read saved theme before first paint -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('cv-theme');
+      if (saved === 'light') {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <script type="module" crossorigin src="/assets/index-CpDBP01-.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/gsap-CB87Sc6I.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-BaTT7bEZ.css">
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        GH<span class="text-accent">.</span>
+      </a>
+
+      <div class="nav-links" role="list">
+        <a href="#projects" role="listitem">Projects</a>
+        <a href="#education" role="listitem">Education</a>
+        <a href="#work" role="listitem">Work</a>
+        <a href="#papers" role="listitem">Papers</a>
+        <a href="#skills" role="listitem">Skills</a>
+        <a href="#contact" role="listitem">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <!-- Filled by footer.ts -->
+        </button>
+        <button id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu hidden" aria-label="Mobile navigation">
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#work">Work</a>
+      <a href="#papers">Papers</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ═══════════════════════ HERO ═══════════════════════ -->
+    <section id="hero" aria-labelledby="hero-headline">
+      <div class="gradient-mesh" aria-hidden="true"></div>
+
+      <div class="hero-container">
+        <div class="hero-grid">
+
+          <!-- Left: Text -->
+          <div class="hero-text">
+            <h1 id="hero-headline" class="hero-headline">
+              <span class="text-gradient">Gaspard</span><br />
+              <span>Hassenforder</span>
+            </h1>
+            <p id="hero-description" class="hero-description">
+              AI Engineer &amp; Data Scientist specializing in autonomous multi-agent systems, RAG architectures,
+              and scalable AI solutions. Passionate about bridging the gap between research and production to drive business value.
+            </p>
+
+            <!-- CTA buttons -->
+            <div id="hero-ctas" class="hero-ctas">
+              <a href="/assets/CV.pdf" download class="cta-btn cta-primary" aria-label="Download CV as PDF">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                  <polyline points="7,10 12,15 17,10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download CV
+              </a>
+<a href="https://www.linkedin.com/in/gaspard-hassenforder-554431225/" target="_blank" rel="noopener noreferrer" class="cta-btn cta-ghost" aria-label="LinkedIn profile (opens in new tab)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com/Gaspard0302" target="_blank" rel="noopener noreferrer" class="cta-btn cta-ghost" aria-label="GitHub profile (opens in new tab)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+              </a>
+            </div>
+
+            <!-- Hero badges -->
+            <div id="hero-badges" class="hero-badges" aria-label="Key skills">
+              <span class="hero-badge">Python</span>
+              <span class="hero-badge">TypeScript</span>
+              <span class="hero-badge">Multi-Agent AI</span>
+              <span class="hero-badge">RAG</span>
+              <span class="hero-badge">Google Cloud</span>
+            </div>
+          </div>
+
+          <!-- Right: Photo -->
+          <div class="hero-photo-wrap" id="hero-photo">
+            <div class="polaroid-frame">
+              <img
+                src="/assets/profile-pic.png"
+                alt="Gaspard Hassenforder — AI Engineer and Data Scientist"
+                class="hero-photo"
+                width="288"
+                height="288"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="6,9 12,15 18,9"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ PROJECTS ═══════════════════════ -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="section-inner">
+        <h2 id="projects-heading" class="section-title">Projects <span class="text-accent">.</span></h2>
+        <p class="section-subtitle">A selection of personal and professional work.</p>
+
+        <!-- Filter bar -->
+        <div role="tablist" aria-label="Filter projects by category" class="filter-bar">
+          <button role="tab" data-filter="All"    aria-selected="true"  class="filter-btn filter-active">All</button>
+          <button role="tab" data-filter="Web"    aria-selected="false" class="filter-btn">Web</button>
+          <button role="tab" data-filter="Mobile" aria-selected="false" class="filter-btn">Mobile</button>
+          <button role="tab" data-filter="OSS"    aria-selected="false" class="filter-btn">OSS</button>
+        </div>
+
+        <!-- Project grid — filled by projects.ts -->
+        <div id="projects-grid" role="list" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ EDUCATION ═══════════════════════ -->
+    <section id="education" class="section" aria-labelledby="education-heading">
+      <div class="section-inner">
+        <h2 id="education-heading" class="section-title">Education <span class="text-accent">.</span></h2>
+        <p class="section-subtitle">Academic foundation and research experience.</p>
+
+        <!-- Timeline — filled by education.ts -->
+        <div id="education-timeline" class="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ WORK HISTORY ═══════════════════════ -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="section-inner">
+        <h2 id="work-heading" class="section-title">Work History <span class="text-accent">.</span></h2>
+        <p class="section-subtitle">Professional experience in AI, data science, and software development.</p>
+
+        <!-- Timeline — filled by workHistory.ts -->
+        <div id="work-timeline" class="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ PAPERS ═══════════════════════ -->
+    <section id="papers" class="section" aria-labelledby="papers-heading">
+      <div class="section-inner">
+        <h2 id="papers-heading" class="section-title">Research Notes <span class="text-accent">.</span></h2>
+        <p class="section-subtitle">My thoughts on recent AI research papers.</p>
+
+        <!-- Accordion — filled by papers.ts -->
+        <div id="papers-list" class="papers-list"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ EXPERIENCE ═══════════════════════ -->
+    <section id="experience" class="section" aria-labelledby="experience-heading">
+      <div class="section-inner">
+        <h2 id="experience-heading" class="section-title">About Me <span class="text-accent">.</span></h2>
+        <p class="section-subtitle">Skills, qualifications, and background beyond the CV.</p>
+
+        <!-- List — filled by experience.ts -->
+        <ul id="experience-list" class="experience-list"></ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ SKILLS ═══════════════════════ -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+      <div class="section-inner">
+        <h2 id="skills-heading" class="section-title">Skills <span class="text-accent">.</span></h2>
+        <p class="section-subtitle">Technical expertise across programming, AI/ML, and tools.</p>
+
+        <!-- Grid — filled by skills.ts -->
+        <div id="skills-grid" class="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <h2 id="contact-heading" class="section-title">Get In Touch <span class="text-accent">.</span></h2>
+        <p class="section-subtitle">Send me a message — I'd love to hear from you.</p>
+
+        <div class="contact-wrap">
+          <form id="contact-form" class="glass-card contact-form" novalidate aria-label="Contact form">
+
+            <!-- Name -->
+            <div class="form-group">
+              <label for="contact-name" class="form-label">
+                Name <span class="text-accent" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="contact-name"
+                name="Name"
+                autocomplete="name"
+                required
+                class="form-input"
+                placeholder="Your name"
+                aria-required="true"
+                aria-describedby="contact-name-error"
+              />
+              <span id="contact-name-error" class="form-error" aria-live="polite" hidden></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="contact-email" class="form-label">
+                Email <span class="text-accent" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                id="contact-email"
+                name="Email"
+                autocomplete="email"
+                required
+                class="form-input"
+                placeholder="your@email.com"
+                aria-required="true"
+                aria-describedby="contact-email-error"
+              />
+              <span id="contact-email-error" class="form-error" aria-live="polite" hidden></span>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="contact-message" class="form-label">
+                Message <span class="text-accent" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="contact-message"
+                name="Message"
+                required
+                rows="5"
+                class="form-input"
+                placeholder="What's on your mind?"
+                aria-required="true"
+                aria-describedby="contact-message-error"
+              ></textarea>
+              <span id="contact-message-error" class="form-error" aria-live="polite" hidden></span>
+            </div>
+
+            <button type="submit" class="cta-btn cta-primary submit-btn">
+              Send Message
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22,2 15,22 11,13 2,9"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/gaspard-hassenforder-554431225/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/Gaspard0302" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-copy">
+        &copy; <span id="copyright-year"></span> Gaspard Hassenforder. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" role="alert" aria-live="assertive"></div>
+
+  <!-- Inline scripts (lightweight, non-module) -->
+  <script>
+    // Mobile menu toggle
+    var menuBtn = document.getElementById('mobile-menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', function () {
+        var isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden', isOpen);
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      });
+      mobileMenu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          mobileMenu.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+    // Copyright year
+    var yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+  </script>
+
+  <!-- ═══════════════════════ CHATBOT ═══════════════════════ -->
+  <!-- Floating action button -->
+  <button id="chatbot-btn" aria-label="Open AI chat assistant" aria-expanded="false" aria-controls="chatbot-panel">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <path d="M12 2C6.477 2 2 6.268 2 11.5c0 2.105.726 4.053 1.947 5.618L2.5 21l4.19-1.4A10.41 10.41 0 0012 21c5.523 0 10-4.268 10-9.5S17.523 2 12 2z"/>
+      <circle cx="8.5" cy="11.5" r="1" fill="currentColor"/>
+      <circle cx="12" cy="11.5" r="1" fill="currentColor"/>
+      <circle cx="15.5" cy="11.5" r="1" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <!-- Chat panel dialog -->
+  <div id="chatbot-panel" role="dialog" aria-modal="true" aria-label="Ask about Gaspard" hidden>
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <span class="chat-title">Ask about Gaspard</span>
+        <span class="chat-sub">Powered by AI · GPT-4o mini</span>
+      </div>
+      <button id="chatbot-close" aria-label="Close chat">✕</button>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite" aria-label="Chat messages"></div>
+    <div class="chat-input-wrap">
+      <input
+        id="chat-input"
+        type="text"
+        placeholder="Ask me anything about Gaspard…"
+        autocomplete="off"
+        aria-label="Your message"
+      />
+      <button id="chat-send" aria-label="Send message">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22,2 15,22 11,13 2,9"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
