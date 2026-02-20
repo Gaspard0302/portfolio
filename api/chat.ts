@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import OpenAI from 'openai';
+import OpenAI, { type ChatCompletionMessageParam } from 'openai';
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
@@ -78,7 +78,7 @@ Databases: PostgreSQL, BigQuery
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { messages } = req.body as { messages: Array<{ role: string; content: string }> };
+  const { messages } = req.body as { messages: ChatCompletionMessageParam[] };
   if (!messages?.length) return res.status(400).json({ error: 'No messages provided' });
 
   const completion = await openai.chat.completions.create({
