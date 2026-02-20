@@ -3,7 +3,10 @@ import OpenAI from 'openai';
 
 type MessageParam = { role: 'system' | 'user' | 'assistant'; content: string };
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai = new OpenAI({
+  apiKey: process.env.MISTRAL_API_KEY,
+  baseURL: 'https://api.mistral.ai/v1',
+});
 
 const SYSTEM_PROMPT = `You are Buddy, an AI assistant on Gaspard Hassenforder's CV portfolio.
 Answer questions concisely and helpfully about Gaspard's background.
@@ -88,7 +91,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (!messages?.length) return res.status(400).json({ error: 'No messages provided' });
 
   const completion = await openai.chat.completions.create({
-    model: 'gpt-4o-mini',
+    model: 'mistral-small-latest',
     messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
     max_tokens: 600,
     temperature: 0.7,
