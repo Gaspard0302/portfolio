@@ -53,6 +53,7 @@ export const PROJECTS: Project[] = [
     description:
       'A Chrome extension that adds a Transcript & AI panel directly inside YouTube\'s native UI — no popups, no overlays. Features real-time transcript with auto-scroll and click-to-seek, inline keyword and semantic (AI-powered) search, and an AI chat with clickable timestamp citations. Supports Anthropic, OpenAI, Gemini, Groq, Mistral, and local Ollama. Built with React 18 + TypeScript + Vite, Vercel AI SDK for streaming chat, and @huggingface/transformers for in-browser embeddings.',
     category: 'OSS',
+    link: 'https://chromewebstore.google.com/detail/mhgpaeabhhbalpcgkpilmgonnobhindm?utm_source=item-share-cb',
   },
   {
     title: 'AgentOverflow',
