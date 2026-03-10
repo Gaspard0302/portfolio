@@ -211,6 +211,18 @@ export const WORK_HISTORY: WorkEntry[] = [
 
 export const PAPERS: Paper[] = [
   {
+    title: 'Doc-to-LoRA',
+    link: 'https://pub.sakana.ai/doc-to-lora/',
+    thoughts: `**Doc-to-LoRA** by Sakana AI might just have resurrected fine-tuning, instead of burning compute to fine-tune a model the old way, they train something that generates LoRA weights. One forward pass, one document or task description in, ready-to-use adapter out. That's it.
+
+Fine-tuning has been dead for at least a year now, for obvious reasons. LLMs got good at basically everything, context engineering techniques exploded, and companies looked at the £100k price tag to fine-tune a 70B model on their own data and decided to pass. Why spend that when you can just RAG it or dump everything into a long context window?
+
+But this changes things. We're already seeing tiny models catching up — Qwen3.5 4B beating GPT-4o on benchmarks, which means phone-grade SOTA is maybe 18 months behind frontier at this point. Pair that with Doc-to-LoRA and you're looking at small, hyper-specialised models that cost basically nothing to run. Generate a LoRA for your codebase, swap it for one trained on your legal docs, swap again for your internal tone of voice. All this with a clean context window, running locally and privately — all for free.
+
+This fits in with what I've been thinking about the direction of AI. Without a world model breakthrough, we're grinding towards a local maximum — a very expensive local maximum, and one that 99% of people don't need. Maybe the future isn't these insanely expensive, subsidy-guzzling generalist digital gods owned by five companies. Maybe it's small, modular, task-specific local AI, and Doc-to-LoRA might be that first step that gets us there.
+    `
+  },
+  {
     title: 'Hierarchical Reasoning Model',
     link: 'https://arxiv.org/abs/2506.21734',
     thoughts: `The **Hierarchical Reasoning Model (HRM)** paper is one of the most intriguing pieces of research I've encountered lately. The idea of leveraging a brain-inspired architecture with two interconnected recurrent modules—one for high-level, abstract reasoning and another for detailed, rapid computations—feels like a significant departure from the current trend of scaling up transformer models. It's refreshing to see RNNs making a comeback, especially with each cell incorporating transformer-based attention mechanisms.
