@@ -174,7 +174,7 @@ export const WORK_HISTORY: WorkEntry[] = [
     details: [
       'Built an AI-powered document anonymization tool that automatically detects and redacts sensitive personal and financial data, running entirely locally within the browser',
       'Added an LLM-powered analysis layer that benchmarks anonymised financial documents against a curated dataset of deals, generating deterministic, actionable feedback tailored to each document',
-      'Built Planalive, a generative AI platform that transforms 2D floor plans into photorealistic, styled interior renders using computer vision (plan parsing, 3D reconstruction) and fine-tuned diffusion models for style transfer and smart inpainting',
+      'Contributed to building Planalive, a generative AI platform that transforms 2D floor plans into photorealistic, styled interior renders using computer vision (plan parsing, 3D reconstruction) and fine-tuned diffusion models for style transfer and smart inpainting',
       'Achieved a 30× cost reduction versus traditional studios and cut time-to-sale from 4 months to 35 days',
     ],
   },
